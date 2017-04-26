@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}"/>
+
+</head>
+<body>
+
+<script src="../static/angular.min.js" th:src="@{/angular.min.js}"></script>
+<script src="../static/angular-cookies.min.js" th:src="@{/angular-cookies.min.js}"></script>
+<script src="../static/angular-route.min.js" th:src="@{/angular-route.min.js}"></script>
+
+<script src="app.js" th:src="@{/app.js}"></script>
+<script src="../static/app/services/authentication.service.js"
+        th:src="@{/app/services/authentication.service.js}"></script>
+<script src="../static/app/services/flash.service.js" th:src="@{/app/services/flash.service.js}"></script>
+
+
+<script src="../static/app/controllers/user.service.js" th:src="@{/app/services/user.service.js}"></script>
+
+
+<script src="../static/app/controllers/home.controller.js" th:src="@{/app/controllers/home.controller.js}"></script>
+<script src="../static/app/controllers/login.controller.js" th:src="@{/app/controllers/login.controller.js}"></script>
+<script src="../static/app/controllers/register.controller.js"
+        th:src="@{/app/controllers/register.controller.js}"></script>
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }"
+                 ng-if="flash" ng-bind="flash.message"></div>
+            <div ng-view></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
