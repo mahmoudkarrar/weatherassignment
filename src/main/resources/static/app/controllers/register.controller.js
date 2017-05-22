@@ -15,12 +15,13 @@
             vm.dataLoading = true;
             UserService.Create(vm.user)
                 .then(function (response) {
-                    if (response) {
-                        FlashService.Success('Registration successful', true);
-                        $location.path('/login');
-                    } else {
+                    if (response && !response.success) {
                         FlashService.Error('Email "' + vm.user.email + '" is already taken');
                         vm.dataLoading = false;
+
+                    } else {
+                        FlashService.Success('Registration successful', true);
+                        $location.path('/login');
                     }
                 });
         }

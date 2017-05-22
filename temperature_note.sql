@@ -2,11 +2,11 @@ create database test;
 use test;
 create table users(
 id bigint(20) NOT NULL AUTO_INCREMENT,
-user_name varchar(25) not null,
-password varchar(12) not null,
-email varchar(25) not null,
+user_name varchar(50) not null,
+password varchar(50) not null,
+email varchar(50) not null,
 mobile_number varchar(25) not null,
-note VARCHAR(500),
+admin char(1),
 PRIMARY KEY (id)
 );
 

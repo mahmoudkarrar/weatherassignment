@@ -1,8 +1,9 @@
 package com.weather.app;
 
 
-import com.weather.app.com.weather.app.dao.DefualtTemperatureRepository;
-import com.weather.app.com.weather.app.dao.UsersRepository;
+
+import com.weather.app.dao.DefualtTemperatureRepository;
+import com.weather.app.dao.UsersRepository;
 import com.weather.app.model.DefaultTemperatureNote;
 import com.weather.app.model.User;
 import org.apache.log4j.Logger;
